@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name leadScoreclientApp
+ * @name leadScoreClientApp
  * @description
- * # leadScoreclientApp
+ * # leadScoreClientApp
  *
  * Main module of the application.
  */
 angular
-  .module('leadScoreclientApp', [
+  .module('leadScoreClientApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',

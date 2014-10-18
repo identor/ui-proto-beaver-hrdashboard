@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name leadScoreclientApp.controller:AboutCtrl
+ * @name leadScoreClientApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the leadScoreclientApp
+ * Controller of the leadScoreClientApp
  */
-angular.module('leadScoreclientApp')
+angular.module('leadScoreClientApp')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
