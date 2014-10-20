@@ -8,8 +8,15 @@
  * Controller of the leadScoreClientApp
  */
 angular.module('leadScoreClientApp')
-  .controller('NavCtrl', function ($scope) {
-    $scope.activeName = 'Home';
+  .controller('NavCtrl', ['$scope', '$location', function ($scope, $location) {
+    function activeNameBasedOn(path, navs) {
+      for (var key in navs) {
+        if (navs[key].href.search(path) > -1) {
+          return navs[key].name;
+        }
+      }
+      return navs[0].name;
+    };
     $scope.navs = [
       {
         'name': 'Home',
@@ -27,4 +34,5 @@ angular.module('leadScoreClientApp')
     $scope.changeActive = function(name) {
       $scope.activeName = name;
     };
-  });
+    $scope.activeName = activeNameBasedOn($location.path(), $scope.navs);
+  }]);

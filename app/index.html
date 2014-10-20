@@ -31,7 +31,7 @@
         </ul>
         <section class="top-bar-section">
           <ul class="right">
-            <li ng-repeat="nav in navs" ng-class="{true: 'active', false:''}[activeName == nav.name]">
+            <li ng-repeat="nav in navs" ng-class="{true:'active', false:''}[activeName == nav.name]">
               <a href="{{nav.href}}" ng-click="changeActive(nav.name)">{{nav.name}}</a>
             </li>
           </ul>
