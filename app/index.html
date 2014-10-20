@@ -21,21 +21,27 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
+    <div class="row container">
+      <nav ng-controller="NavCtrl" class="top-bar header" data-topbar role="navigation">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a ng-href="#">leadScores</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a ng-href="#"><span></span></a></li>
         </ul>
-        <h3 class="text-muted">leadScoreClient</h3>
-      </div>
+        <section class="top-bar-section">
+          <ul class="right">
+            <li ng-repeat="nav in navs" ng-class="{true: 'active', false:''}[activeName == nav.name]">
+              <a href="{{nav.href}}" ng-click="changeActive(nav.name)">{{nav.name}}</a>
+            </li>
+          </ul>
+        </section>
+      </nav>
 
       <div ng-view=""></div>
 
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
+      <footer>
+      </footer>
     </div>
 
 
@@ -79,6 +85,9 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/upload.js"></script>
+        <script src="scripts/controllers/nav.js"></script>
         <!-- endbuild -->
+        <script>jQuery(document).foundation();</script>
 </body>
 </html>
