@@ -1,8 +1,13 @@
-<div class="medium-3 columns">
-<p>Upload your files here...</p>
-</div>
-<div class="medium-9 columns">
-<ul class="small-block-grid-1">
-  <li><img src="http://placehold.it/700x300/" alt="sorry" /></li>
-</ul>
+<div class="medium-12 columns">
+  <h4 ng-model="file">{{file.name}}</h4>
+  <ul class="small-block-grid-1">
+    <li><img src="http://placehold.it/950x300/" alt="sorry" /></li>
+  </ul>
+  <form>
+    <label class="button" id="leadscore-file-input-label" for="leadscore-file-input">
+      Select file...
+    </label>
+    <button id="leadscore-upload-button">Upload</button>
+    <input type="file" id="leadscore-file-input" />
+  </form>
 </div>
