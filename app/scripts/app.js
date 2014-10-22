@@ -31,6 +31,14 @@ angular
         templateUrl: 'views/upload.html',
         controller: 'UploadCtrl'
       })
+      .when('/wave', {
+        templateUrl: 'views/wave.html',
+        controller: 'WaveCtrl'
+      })
+      .when('/applicantform', {
+        templateUrl: 'views/applicantform.html',
+        controller: 'ApplicantformCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

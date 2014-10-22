@@ -11,10 +11,11 @@ angular.module('leadScoreClientApp')
   .controller('UploadCtrl', function ($scope) {
     var $leadScoreFileInput = $('#leadscore-file-input');
     var $leadScoreUploadButton = $('#leadscore-upload-button');
-    $scope.file = '123123';
+    $scope.fileDisplaySize = '';
+    $scope.file = '';
     $scope.updateLeadScoreFile = function() {
       $scope.file = $leadScoreFileInput.get(0).files[0];
-      $scope.fileName = $scope.file.name;
+      $scope.fileDisplaySize = ' (' + Math.round($scope.file.size / 1024) + ' KB) ';
       console.log('file selected');
     };
 
