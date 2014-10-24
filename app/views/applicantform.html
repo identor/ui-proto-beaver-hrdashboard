@@ -85,71 +85,37 @@
     </div>
     <div class="medium-4 columns">
       <label>E-mail Address
-        <input type="text" placeholder="apply@synergbpo.com" />
+        <input type="text" placeholder="apply@synergbpo.com">
       </label>
     </div>
   </div>
   </fieldset>
-  <fieldset>
-    <legend>General Information</legend>
+  <fieldset ng-repeat="record in employmentRecords">
+    <legend>Employment Record: {{record.companyName}}</legend>
     <div class="row">
-      <div class="medium-6 columns">
-        <label>Have you been previously employed?</label>
-        <input type="radio" name="past-employment" value="yes" id="past-employment-yes"><label for="yes">Yes</label>
-        <input type="radio" name="past-employment" value="no" id="past-employment-no"><label for="no">No</label>
+      <div class="medium-5 columns">
+        <label>Company name
+          <input ng-model="record.companyName" type="text" placeholder="Syner G Outsourcing Inc.">
+        </label>
       </div>
-    </div>
-    <fieldset>
-      <legend>If yes</legend>
-      <div class="row">
-        <div class="medium-6 columns">
-          <label>Year</label>
-        </div>
-        <div class="medium-6 columns">
-          <input type="text" placeholder="medium-4" />
-        </div>
+      <div class="medium-3 columns">
+        <label>Contact
+          <input type="text" placeholder="074-424-1388">
+        </label>
       </div>
-      <div class="row">
-        <div class="medium-6 columns">
-          <label>Business Establishment</label>
-        </div>
-        <div class="medium-6 columns">
-          <input type="text" placeholder="medium-4" />
-        </div>
+      <div class="medium-2 small-5 columns">
+        <label>Year
+          <input type="text" placeholder="2015">
+        </label>
       </div>
-      <div class="row">
-        <div class="medium-6 columns">
-          <label>Position</label>
-        </div>
-        <div class="medium-6 columns">
-          <input type="text" placeholder="medium-4" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="medium-6 columns">
-          <label>Reference Name</label>
-        </div>
-        <div class="medium-6 columns">
-          <input type="text" placeholder="medium-4" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="medium-6 columns">
-          <label>Reference Contact #</label>
-        </div>
-        <div class="medium-6 columns">
-          <input type="text" placeholder="medium-4" />
-        </div>
-      </div>
-    </fieldset>
-    <div class="row">
-      <div class="medium-12 columns">
-        <label>How were you referred to us?
-          <textarea placeholder="small-12.columns"></textarea>
+      <div class="medium-2 small-2 columns end">
+        <label>Remove<br>
+          <a class="button tiny alert" ng-click="employmentRecords.splice(employmentRecords.indexOf(record), 1)"><i class="fa fa-trash"></i></a>
         </label>
       </div>
     </div>
   </fieldset>
+  <a class="button" ng-click="employmentRecords.push({})">Add Employment Record</a>
   <fieldset>
     <legend>Education</legend>
     <div class="row">
