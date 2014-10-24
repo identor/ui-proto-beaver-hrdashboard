@@ -9,11 +9,13 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link rel="stylesheet" href="bower_components/foundation-datepicker/stylesheets/foundation-datepicker.css" />
   </head>
   <body ng-app="leadScoreClientApp">
     <!--[if lt IE 7]>
@@ -25,7 +27,12 @@
       <nav ng-controller="NavCtrl" class="top-bar header" data-topbar role="navigation">
         <ul class="title-area">
           <li class="name">
-            <h1><a ng-href="#">Beaver HR</a></h1>
+            <h1>
+              <a ng-href="#">
+                <i class="fa fa-image"></i>
+                Beaver
+              </a>
+            </h1>
           </li>
           <li class="toggle-topbar menu-icon"><a ng-href="#"><span></span></a></li>
         </ul>
@@ -37,7 +44,9 @@
           </ul>
           <ul class="left">
             <li>
-              <a href="javascript:void(0);" class="button alert" data-dropdown="contentDrop">!</a>
+            <a class="button alert radius" data-dropdown="contentDrop">
+              <i class="fa fa-warning"></i>
+            </a>
             </li>
             <div id="contentDrop" class="f-dropdown content small" data-dropdown-content="" style=">position: absolute; left: 181.233px; top: 3083.75px;">
               <h6>Some Notification</h6>
@@ -94,6 +103,7 @@
     <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
     <script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="bower_components/foundation/js/foundation.js"></script>
+    <script src="bower_components/foundation-datepicker/js/foundation-datepicker.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

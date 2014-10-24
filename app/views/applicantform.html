@@ -1,55 +1,91 @@
-<p>This is the applicantform view.</p>
 <form class="large-12 columns">
   <fieldset>
     <legend>Personal Information</legend>
   <div class="row">
     <div class="medium-4 columns">
-      <label>Lastname
-        <input type="text" placeholder="medium-4" />
+      <label>Family name
+        <input type="text" placeholder="dela Cruz" />
       </label>
     </div>
     <div class="medium-4 columns">
-      <label>Firstname
-        <input type="text" placeholder="medium-4" />
+      <label>First name
+        <input type="text" placeholder="Juan" />
       </label>
     </div>
-    <div class="medium-2 columns end">
-      <label>M.I.
-        <input type="text" placeholder="medium-4" />
+    <div class="medium-4 columns end">
+      <label>Middle name
+        <input type="text" placeholder="Gitna" />
       </label>
     </div>
   </div>
   <div class="row">
     <div class="medium-4 columns">
-      <label>Address
-        <input type="text" placeholder="medium-4" />
+      <label>Gender
+        <select>
+          <option>-- Please Select --</option>
+          <option>Female</option>
+          <option>Male</option>
+        </select>
+      </label>
+    </div>
+    <div class="medium-4 columns end">
+      <label>Civil Status
+        <select>
+          <option>-- Please Select --</option>
+          <option>Single</option>
+          <option>Married</option>
+          <option>Divorced</option>
+          <option>Legally Separated</option>
+          <option>Widowed</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-8 columns">
+      <label>Address (House no. Street, Baranggay)
+        <input type="text" placeholder="#2 Roman Ayson Rd., Bokawkan" />
       </label>
     </div>
     <div class="medium-4 columns">
-      <label>City
-        <input type="text" placeholder="medium-4" />
-      </label>
-    </div>
-    <div class="medium-4 columns">
-      <label>Zip Code
-        <input type="text" placeholder="medium-4" />
+      <label>City/State
+        <input type="text" placeholder="Baguio" />
       </label>
     </div>
   </div>
   <div class="row">
     <div class="medium-4 columns">
       <label>Birth Date
-        <input type="text" placeholder="date-picker here" />
+        <input type="text" class="span2" placeholder="mm/dd/yyyy" id="dp1">
+      </label>
+    </div>
+    <div class="medium-2 columns end">
+      <label>Age
+        <input disabled type="text" class="span2" placeholder="">
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-4 columns">
+      <label>Cellphone Number
+        <div class="row collapse">
+          <div class="small-3 columns">
+            <span class="prefix">+63</span>
+          </div>
+          <div class="small-9 columns">
+            <input type="text" placeholder="9001234567">
+          </div>
+        </div>
       </label>
     </div>
     <div class="medium-4 columns">
-      <label>Contact Number
-        <input type="text" placeholder="medium-4" />
+      <label>Landline
+        <input type="text" placeholder="074-424-1388">
       </label>
     </div>
     <div class="medium-4 columns">
-      <label>E-mail
-        <input type="text" placeholder="medium-4" />
+      <label>E-mail Address
+        <input type="text" placeholder="apply@synergbpo.com" />
       </label>
     </div>
   </div>
@@ -160,8 +196,8 @@
   </fieldset>
   <div class="row">
     <div class="medium-12 columns">
-      <button>Submit</button>
-      <button class="alert">Cancel</button>
+      <a class="button">Submit</a>
+      <a class="button">Cancel</a>
     </div>
   </div>
 </form>
