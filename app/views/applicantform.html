@@ -4,7 +4,7 @@
   <div class="row">
     <div class="medium-4 columns">
       <label>Family name
-        <input type="text" placeholder="dela Cruz" />
+        <input type="text" placeholder="Cruz" />
       </label>
     </div>
     <div class="medium-4 columns">
@@ -14,24 +14,22 @@
     </div>
     <div class="medium-4 columns end">
       <label>Middle name
-        <input type="text" placeholder="Gitna" />
+        <input type="text" placeholder="Dela" />
       </label>
     </div>
   </div>
   <div class="row">
-    <div class="medium-4 columns">
+    <div class="small-6 medium-4 columns">
       <label>Gender
         <select>
-          <option>-- Please Select --</option>
-          <option>Female</option>
           <option>Male</option>
+          <option>Female</option>
         </select>
       </label>
     </div>
-    <div class="medium-4 columns end">
+    <div class="small-6 medium-4 columns end">
       <label>Civil Status
         <select>
-          <option>-- Please Select --</option>
           <option>Single</option>
           <option>Married</option>
           <option>Divorced</option>
@@ -54,12 +52,12 @@
     </div>
   </div>
   <div class="row">
-    <div class="medium-4 columns">
+    <div class="medium-4 small-6 columns">
       <label>Birth Date
         <input type="text" class="span2" placeholder="mm/dd/yyyy" id="dp1">
       </label>
     </div>
-    <div class="medium-2 columns end">
+    <div class="medium-2 small-6 columns end">
       <label>Age
         <input disabled type="text" class="span2" placeholder="">
       </label>
@@ -90,10 +88,51 @@
     </div>
   </div>
   </fieldset>
-  <fieldset ng-repeat="record in employmentRecords">
-    <legend>Employment Record: {{record.companyName}}</legend>
+  <fieldset>
+    <legend>Education</legend>
+    <div class="row" ng-repeat="record in education">
+      <div class="medium-3 columns">
+        <label>Level
+          <select>
+            <option>College</option>
+            <option>Highschool</option>
+            <option>Elementary</option>
+            <option>Others</option>
+          </select>
+        </label>
+      </div>
+      <div class="medium-4 columns">
+        <label>School (Indicate degree)
+          <input type="text" placeholder="Saint Louis University - BSIT">
+        </label>
+      </div>
+      <div class="medium-2 small-6 columns">
+        <label>From
+          <input type="text" placeholder="2011">
+        </label>
+      </div>
+      <div class="medium-2 small-6 columns">
+        <label>To
+          <input type="text" placeholder="2015">
+        </label>
+      </div>
+      <div class="medium-1 small-12 columns end text-center">
+        <label><br>
+          <a class="trash-red" ng-click="education.splice(education.indexOf(record), 1)"><i class="fa fa-trash fa-2x"></i></a>
+        </label>
+      </div>
+      <hr class="show-for-small-only">
+    </div>
     <div class="row">
-      <div class="medium-5 columns">
+      <div class="text-center small-12 columns">
+        <a class="" ng-click="education.push({})"><i class="fa fa-plus"></i></a>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Employment Records</legend>
+    <div class="row" ng-repeat="record in employmentRecords">
+      <div class="medium-4 columns">
         <label>Company name
           <input ng-model="record.companyName" type="text" placeholder="Syner G Outsourcing Inc.">
         </label>
@@ -103,67 +142,35 @@
           <input type="text" placeholder="074-424-1388">
         </label>
       </div>
-      <div class="medium-2 small-5 columns">
-        <label>Year
+      <div class="medium-2 small-6 columns">
+        <label>From
+          <input type="text" placeholder="2011">
+        </label>
+      </div>
+      <div class="medium-2 small-6 columns">
+        <label>To
           <input type="text" placeholder="2015">
         </label>
       </div>
-      <div class="medium-2 small-2 columns end">
-        <label>Remove<br>
-          <a class="button tiny alert" ng-click="employmentRecords.splice(employmentRecords.indexOf(record), 1)"><i class="fa fa-trash"></i></a>
+      <div class="medium-1 small-12 columns end text-center">
+        <label><br>
+          <a class="trash-red" ng-click="employmentRecords.splice(employmentRecords.indexOf(record), 1)"><i class="fa fa-trash fa-2x"></i></a>
         </label>
       </div>
-    </div>
-  </fieldset>
-  <a class="button" ng-click="employmentRecords.push({})">Add Employment Record</a>
-  <fieldset>
-    <legend>Education</legend>
-    <div class="row">
-      <div class="medium-offset-3 medium-6 columns">
-        <label>School</label>
-      </div>
-      <div class="medium-3 columns end">
-        <label>Year Graduated</label>
-      </div>
+      <hr class="show-for-small-only">
     </div>
     <div class="row">
-      <div class="medium-3 columns">
-        <label>High School</label>
-      </div>
-      <div class="medium-6 columns">
-        <input type="text" placeholder="medium-6">
-      </div>
-      <div class="medium-3 columns end">
-        <input type="text" placeholder="medium-6">
-      </div>
-    </div>
-    <div class="row">
-      <div class="medium-3 columns">
-        <label>College</label>
-      </div>
-      <div class="medium-6 columns">
-        <input type="text" placeholder="medium-6">
-      </div>
-      <div class="medium-3 columns end">
-        <input type="text" placeholder="medium-6">
-      </div>
-    </div>
-    <div class="row">
-      <div class="medium-3 columns">
-        <label>Others</label>
-      </div>
-      <div class="medium-6 columns">
-        <input type="text" placeholder="medium-6">
-      </div>
-      <div class="medium-3 columns end">
-        <input type="text" placeholder="medium-6">
+      <div class="text-center small-12 columns">
+        <a ng-click="employmentRecords.push({})"><i class="fa fa-plus"></i></a>
       </div>
     </div>
   </fieldset>
-  <div class="row">
-    <div class="medium-12 columns">
-      <a class="button">Submit</a>
-      <a class="button">Cancel</a>
+  <div class="row" data-equalizer>
+    <div class="small-6 medium-offset-6 medium-3 columns">
+      <a class="button right expand">Submit</a>
+    </div>
+    <div class="small-6 medium-3 columns end">
+      <a class="button left expand alert">Cancel</a>
     </div>
   </div>
 </form>

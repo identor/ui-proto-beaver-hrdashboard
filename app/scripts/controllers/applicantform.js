@@ -10,6 +10,6 @@
 angular.module('leadScoreClientApp')
   .controller('ApplicantformCtrl', function ($scope) {
     $('#dp1').fdatepicker();
-    $('#dp2').fdatepicker();
     $scope.employmentRecords = [];
+    $scope.education = [];
   });
