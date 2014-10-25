@@ -39,6 +39,14 @@ angular
         templateUrl: 'views/applicantform.html',
         controller: 'ApplicantformCtrl'
       })
+      .when('/applicants', {
+        templateUrl: 'views/applicants.html',
+        controller: 'ApplicantsCtrl'
+      })
+      .when('/personnel', {
+        templateUrl: 'views/personnel.html',
+        controller: 'PersonnelCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

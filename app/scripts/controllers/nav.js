@@ -23,12 +23,16 @@ angular.module('leadScoreClientApp')
         'href': '#/',
       },
       {
-        'name': 'Wave',
-        'href': '#/wave',
+        'name': 'Applicants',
+        'href': '#/applicants',
       },
       {
-        'name': 'About',
-        'href': '#/about',
+        'name': 'Personnel',
+        'href': '#/personnel',
+      },
+      {
+        'name': 'Syner G Campus',
+        'href': '#/wave',
       },
     ];
     $scope.changeActive = function(name) {
