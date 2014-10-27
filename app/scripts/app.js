@@ -50,4 +50,18 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  })
+  .factory('ApplicantService', function() {
+    function ApplicantService() {
+      var applicants = [];
+
+      this.addApplicant = function(applicant) {
+        applicants.push(applicant);
+      }
+
+      this.getApplicants = function() {
+        return applicants;
+      }
+    };
+    return new ApplicantService();
   });
