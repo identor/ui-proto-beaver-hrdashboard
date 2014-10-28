@@ -1,4 +1,11 @@
 <div class="row panel">
+  <dl class="sub-nav">
+    <dt>Filter:</dt>
+    <dd class="active"><a href="#">For Interview</a></dd>
+    <dd><a>Interviewed</a></dd>
+    <dd><a>Scheduled</a></dd>
+    <dd><a>Others</a></dd>
+  </dl>
   <p>This form contains all the applicants that have registered using the kiosk.</p>
 </div>
 <div class="row panel">
@@ -28,9 +35,26 @@
         <label>{{person.registrationDate}}</label>
       </div>
       <div class="small-12 medium-2 columns">
-        <a class="button small expand"><i class="fa fa-eye"></i> Interview</a>
+        <div class="row collapse">
+          <div class="small-6 columns">
+            <a class="button small prefix" ng-click="showInterviewModal(person)"><i class="fa fa-eye"></i></a>
+          </div>
+          <div class="small-6 columns end">
+            <a class="button small postfix success" ng-click="showScheduleModal(person)"><i class="fa fa-calendar"></i></a>
+          </div>
+        </div>
       </div>
       <hr>
+    <div ng-model="applicantCursor" id="interview-modal" class="reveal-modal" data-reveal>
+      <h4>Interview</h4>
+      <a class="button">Save</a>
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
+    <div ng-model="applicantCursor" id="schedule-modal" class="reveal-modal" data-reveal>
+      <h2>Schedule</h2>
+      <p class="lead">Your couch.  It is mine.</p>
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
     </div>
     <div class="row text-center">
       <div class="small-4 columns"><i class="fa fa-circle-o"></i></div>
