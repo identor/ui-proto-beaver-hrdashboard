@@ -1,6 +1,6 @@
 <div class="row panel">
   <dl class="sub-nav">
-    <dt>Filter:</dt>
+    <dt>Views</dt>
     <dd class="active"><a href="#">For Interview</a></dd>
     <dd><a>Interviewed</a></dd>
     <dd><a>Scheduled</a></dd>
@@ -47,7 +47,36 @@
       <hr>
     <div ng-model="applicantCursor" id="interview-modal" class="reveal-modal" data-reveal>
       <h4>Interview</h4>
-      <a class="button">Save</a>
+      <div class="small-12 columns">
+        <div class="row">
+          <div class="medium-12 columns">
+            <label>Name
+              <input type="text" placeholder="{{applicantCursor.name}}" disabled>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 columns">
+            <label for="score">Score</label>
+          </div>
+          <div class="small-12 columns">
+            <input id="score" type="text" placeholder="1 to 100">
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 columns">
+            <textarea placeholder="Comments"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-6 columns">
+            <a class="button expand">Save</a>
+          </div>
+          <div class="small-6 columns">
+            <a class="button expand">Cancel</a>
+          </div>
+        </div>
+      </div>
       <a class="close-reveal-modal">&#215;</a>
     </div>
     <div ng-model="applicantCursor" id="schedule-modal" class="reveal-modal" data-reveal>
