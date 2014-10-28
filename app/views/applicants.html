@@ -14,30 +14,18 @@
   </div>
   <hr>
   <div class="small-12 columns">
-    <div class="row text-center">
+    <div class="row text-center" ng-repeat="person in applicants">
       <div class="small-12 medium-1 columns">
-        <i class="fa fa-male fa-2x"></i>
+        <span ng-switch="person.gender">
+          <i ng-switch-when="M" class="fa fa-male fa-2x"></i>
+          <i ng-switch-when="F" class="fa fa-female fa-2x"></i>
+        </span>
       </div>
       <div class="small-12 medium-6 columns">
-        <a>Juan Dela Cruz</a>
+        <a>{{person.name}}</a>
       </div>
       <div class="small-12 medium-3 columns">
-        <label>10/22/2014</label>
-      </div>
-      <div class="small-12 medium-2 columns">
-        <a class="button small expand"><i class="fa fa-eye"></i> Interview</a>
-      </div>
-      <hr>
-    </div>
-    <div class="row text-center">
-      <div class="small-12 medium-1 columns">
-        <i class="fa fa-female fa-2x"></i>
-      </div>
-      <div class="small-12 medium-6 columns">
-        <a>Mari Leonora Teresa</a>
-      </div>
-      <div class="small-12 medium-3 columns">
-        <label>10/23/2014</label>
+        <label>{{person.registrationDate}}</label>
       </div>
       <div class="small-12 medium-2 columns">
         <a class="button small expand"><i class="fa fa-eye"></i> Interview</a>

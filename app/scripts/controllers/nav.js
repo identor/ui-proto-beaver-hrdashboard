@@ -16,7 +16,7 @@ angular.module('leadScoreClientApp')
         }
       }
       return navs[0].name;
-    };
+    }
     $scope.navs = [
       {
         'name': 'Home',

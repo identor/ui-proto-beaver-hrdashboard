@@ -1,5 +1,7 @@
 'use strict';
 
+/* global $:false */
+
 /**
  * @ngdoc function
  * @name leadScoreClientApp.controller:ApplicantformCtrl

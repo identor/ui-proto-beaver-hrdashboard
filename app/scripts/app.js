@@ -53,15 +53,26 @@ angular
   })
   .factory('ApplicantService', function() {
     function ApplicantService() {
-      var applicants = [];
+      var applicants = [
+        {
+          name: 'Juan Dela Cruz',
+          gender: 'M',
+          registrationDate: '10/22/2014'
+        },
+        {
+          name: 'Maria Leonora Teresa',
+          gender: 'F',
+          registrationDate: '10/23/2014'
+        }
+      ];
 
       this.addApplicant = function(applicant) {
         applicants.push(applicant);
-      }
+      };
 
       this.getApplicants = function() {
         return applicants;
-      }
-    };
+      };
+    }
     return new ApplicantService();
   });
