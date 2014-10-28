@@ -20,4 +20,5 @@ angular.module('leadScoreClientApp')
       $('#schedule-modal').foundation('reveal', 'open');
       $scope.applicantCursor = person;
     };
+    $('.fdatepicker').fdatepicker();
   });
